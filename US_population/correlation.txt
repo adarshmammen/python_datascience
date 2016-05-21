@@ -1,0 +1,11 @@
+Correlation matrix of 
+1    Northeast Region
+2      Midwest Region
+3        South Region
+4         West Region
+Name: NAME, dtype: object
+          1         2         3         4
+1  1.000000  0.992813  0.988687  0.987206
+2  0.992813  1.000000  0.997142  0.997257
+3  0.988687  0.997142  1.000000  0.999893
+4  0.987206  0.997257  0.999893  1.000000

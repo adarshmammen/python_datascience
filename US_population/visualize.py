@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
 	file = pd.read_csv('csv.csv')
-	print "Showing population growth of " +file.iloc[26]['NAME']
+	#print "Showing population growth of " +file.iloc[26]['NAME']
 	x = file.iloc[26][7:13].plot(kind='line',figsize=(20,10),title="Population Growth between 2010 and 2015")
 	x.set_ylabel('Number of people')
 	plt.savefig('mass')
@@ -19,4 +19,14 @@ if __name__ == "__main__":
 	x2.set_ylabel('Number of people')
 	plt.savefig('all1')
 	plt.show()
+
+	x1 = file.ix[1:4,7:13].transpose()
+	print "Correlation matrix of " ; print file.ix[1:4,'NAME']
+	str2 = str("Correlation matrix of ")
+	str3 =  str(file.ix[1:4,'NAME'])
+	f = open('correlation.txt','w')
+	f.write(str2+"\n" +str3+"\n")
+	str1 = str(x1.corr())
+	f.write(str1)
+	print x1.corr()
 	
